@@ -19,6 +19,11 @@
     textNode.options.forEach(option => {
       if (showOption(option)) {
         const button = document.createElement('button')
+        if(option.text == "Börja berättelsen") {
+        button.style.backgroundImage = "url('/B.png')"
+        button.style.height = "230px"
+        button.style.width = "230px"
+        }
         button.innerText = option.text
         button.classList.add('btn')
         button.addEventListener('click', () => selectOption(option))
