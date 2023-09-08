@@ -64,19 +64,46 @@ export const textNodes = [
         }
       ]
     },
+    {
+      id: 10,
+        text: 'Du offrade flickan och kunde därför gå över bron',
+        options: [
+          {
+            text: 'fortsätt',
+            nextText: 12
+          }
+        ]
+      },
+
+      {
+        id: 12,
+          text: 'Det började storma och du flög med vinden',
+          options: [
+            {
+              text: 'fortsätt',
+              nextText: 10
+            }
+          ]
+        },
+
   {
-    id: 10,
-      text: 'Du offrade flickan och kunde därför gå över bron, vad gör du?',
+    id: 13,
+      text: 'stormen skickade dig hem',
       options: [
         {
-          text: 'Offra flickan',
-          requiredState: (currentState) => currentState.flicka,
-          setState: { flicka: false },
-          nextText: 10
-        },
+          text: 'Starta om :c',
+          nextText: -1
+        }
+      ]
+    },
+
+  {
+    id: 14,
+      text: 'Du kom till skolan fram till skolan, bra jobbat :з',
+      options: [
         {
-          text: 'Slå ner gamla mannen',
-          nextText: 11
+          text: 'Starta om',
+          nextText: -1
         }
       ]
     },

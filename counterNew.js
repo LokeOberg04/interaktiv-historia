@@ -4,6 +4,15 @@
   
   let state = {}
   
+  function storm() {
+    if(Math.random() < 0.5) {
+      console.log(Math.random())
+      return 13
+    } else {
+      return 14
+    }
+  }
+
   function startGame() {
     state = {}
     showTextNode(1)
@@ -19,6 +28,9 @@
     textNode.options.forEach(option => {
       if (showOption(option)) {
         const button = document.createElement('button')
+        if(textNode.id == 12) {
+          option.nextText = storm();
+        }
         if(option.text == "Börja berättelsen") {
         button.style.backgroundImage = "url('/B.png')"
         button.style.height = "230px"
