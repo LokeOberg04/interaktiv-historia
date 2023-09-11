@@ -126,6 +126,7 @@ export function setupButtons() {
       document.querySelector('#choice2').hidden = true
     }
     if (answers[1] == 2 && answers[2] == 1 && answers[3] == 2 && answers[4] == 2 && answers[5] == 2) {
+      document.querySelector('#alexandro').hidden = false
       document.querySelector('#title').innerHTML = `Best ending`
       document.querySelector('#text').innerHTML = `Alexandro skrämde bort polisen så nu är du säker, han gav dig även 5 bapiljoner kronor`
       document.querySelector('#choice1').hidden = true
